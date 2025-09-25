@@ -18,6 +18,8 @@ Traditional reporting systems are slow, lack transparency, and discourage citize
 
 This system empowers **citizens + local bodies** to collaborate and improve civic infrastructure efficiently.  
 
+
+
 ---
 
 ## 🚀 Key Features
@@ -63,10 +65,41 @@ This system empowers **citizens + local bodies** to collaborate and improve civi
 - **Improves governance transparency** & citizen trust.  
 - **Scalable** across towns, cities, and even states.  
 
+---
 
-## 📂 Project Structure
-NagrikMittra/
-│── frontend/ # React frontend
-│── backend/ # Node.js + Express backend
-│── README.md
-│── LICENSE
+### 🔎 How it Works
+- **Users** report issues → platform categorizes & processes them.  
+- **Main Admin** gets escalations and monitors system-wide.  
+- **Sub-Admins** manage regional issues.  
+- **Block Admins** oversee local complaints.  
+- **Departments** execute and resolve tasks.  
+- **Platform** keeps syncing updates back to users for transparency.  
+
+---
+
+## 🛠️ System Architecture (User & Admin Workflow)
+
+```mermaid
+flowchart LR
+    U[👤 Users] -->|Report Issues| P[(NagrikMittra Platform)]
+
+    subgraph Admin_Hierarchy [🏛️ Admin Hierarchy]
+        MA[Main Admin]
+        SA[Sub-Admin]
+        BA[Block Admin]
+        D[Departments]
+    end
+
+    P -->|Escalation & Assignment| MA
+    MA --> SA
+    SA --> BA
+    BA --> D
+
+    D -->|Updates & Resolution| P
+    P -->|Real-time Status| U
+
+
+
+
+
+
