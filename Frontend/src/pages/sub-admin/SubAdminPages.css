@@ -1,0 +1,295 @@
+/* Make sure to import this file in your page components */
+
+/* --- Page Container --- */
+.sub-admin-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page-header {
+    margin-bottom: 1rem;
+}
+.page-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+.page-header p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+
+/* --- Stats Grid (Dashboard) --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.stat-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-left: 4px solid;
+}
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.stat-info h4 { margin: 0 0 0.25rem 0; color: var(--text-secondary); font-weight: 500; }
+.stat-info p { margin: 0; font-size: 2rem; font-weight: 700; }
+
+/* --- Charts Grid (Dashboard) --- */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+.chart-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.chart-card h3 { margin-top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;}
+
+/* --- Places Grid (Current Requests) --- */
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.place-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.place-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.place-card-header { display: flex; align-items: center; gap: 0.75rem; color: var(--accent-primary); }
+.place-card-header h3 { margin: 0; }
+.place-card-body .issue-count { font-size: 2.5rem; font-weight: 700; color: var(--text-primary); }
+.view-now-btn {
+    width: 100%;
+    background-color: var(--accent-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+.view-now-btn:hover { background-color: #2563eb; }
+
+/* --- Data Table (Pending Requests) --- */
+.table-card-wrapper {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+.data-table-sub {
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-table-sub th, .data-table-sub td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+.data-table-sub th { font-weight: 600; color: var(--text-secondary); }
+.status-badge-pending {
+    background-color: #FFBB28;
+    color: #333;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.btn-secondary-sub {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-secondary-sub:hover { background-color: var(--border-color); }
+
+/* --- Chat (Messages) --- */
+.chat-container {
+    height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.chat-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.chat-header h3 { margin: 0; }
+.chat-box {
+    flex-grow: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.chat-message { display: flex; }
+.chat-message.sent { justify-content: flex-end; }
+.chat-message.received { justify-content: flex-start; }
+.message-bubble {
+    max-width: 70%;
+    padding: 0.8rem 1rem;
+    border-radius: 18px;
+}
+.chat-message.sent .message-bubble {
+    background-color: var(--accent-primary);
+    border-bottom-right-radius: 4px;
+}
+.chat-message.received .message-bubble {
+    background-color: #3e4451;
+    border-bottom-left-radius: 4px;
+}
+.message-text { margin: 0; }
+.message-time { font-size: 0.75rem; color: #b0b0b0; text-align: right; margin-top: 0.25rem; display: block; }
+
+.chat-input-form {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.chat-input-form input {
+    flex-grow: 1;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+.chat-input-form button {
+    background-color: var(--accent-primary);
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+
+/* Is file ke aakhir mein yeh naya CSS add karein */
+
+.request-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.form-card-request, .table-card-request {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.form-card-request h3, .table-card-request h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-card-request textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    resize: vertical;
+}
+
+.btn-send-request {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-primary);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.request-list {
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 0.5rem;
+}
+
+.request-item {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 4px solid var(--border-color);
+}
+.request-item.status-approved { border-left-color: var(--accent-secondary); }
+.request-item.status-rejected { border-left-color: #ef4444; }
+.request-item.status-pending { border-left-color: #f59e0b; }
+
+
+.request-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.request-item-header h4 { margin: 0; }
+.request-desc { margin: 0 0 0.5rem 0; color: var(--text-secondary); }
+.request-date { font-size: 0.8rem; color: #888; margin: 0; }
+
+.status-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+}
+.status-pill.approved { background-color: var(--accent-secondary); color: white; }
+.status-pill.rejected { background-color: #ef4444; color: white; }
+.status-pill.pending { background-color: #f59e0b; color: #333; }
+
+.status-icon { color: inherit; }

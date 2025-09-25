@@ -1,0 +1,22 @@
+.admin-header-center {
+  width: 100%;
+  padding: 1rem 0 2rem 0;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.admin-header-center h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-header-center p {
+  margin: 0.25rem 0 0 0;
+  color: #ccc;
+  font-size: 1.1rem;
+  font-weight: 400;
+}

@@ -1,0 +1,23 @@
+/* src/components/home/CategoryCard.css */
+.category-card {
+    background-color: #e7d153;
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 5px solid var(--card-color);
+    flex: 1;
+    min-width: 120px;
+}
+
+.card-icon {
+    font-size: 3rem;
+}
+
+.card-title {
+    margin-top: 1rem;
+    color: #2d3436;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}

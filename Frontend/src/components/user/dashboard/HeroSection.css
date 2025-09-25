@@ -1,0 +1,86 @@
+.hero-section-modern {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+              radial-gradient(circle at 75% 75%, rgba(168,237,234,0.1) 0%, transparent 50%);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cards-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns for desktop */
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1000px;   /* Ensures perfect width on desktop */
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Cards are always left-aligned with no unwanted space */
+.card-wrapper {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 0.8s ease forwards;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .cards-grid-container {
+    max-width: 860px;
+    gap: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .cards-grid-container {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .cards-grid-container {
+    grid-template-columns: 1fr;
+    max-width: 98vw;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}

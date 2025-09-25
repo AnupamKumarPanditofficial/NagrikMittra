@@ -1,0 +1,67 @@
+/* src/components/layout/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1a2c50;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin: 0 1.2rem;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.auth-buttons .btn {
+    padding: 0.6rem 1.8rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    margin-right: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-register {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+.btn-register:hover {
+    opacity: 0.9;
+}

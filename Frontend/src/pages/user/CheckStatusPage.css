@@ -1,0 +1,141 @@
+.check-status-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.error-msg {
+  color: #b00020;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.status-journey {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 40px;
+  border-left: 3px solid #ddd;
+}
+
+.status-step {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.step-marker {
+  position: absolute;
+  left: -26px;
+  top: 0;
+  background-color: #ccc;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.status-step.completed .step-marker {
+  background-color: #0077cc;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.step-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+/* Connector line between steps */
+.step-connector {
+  position: absolute;
+  left: -11px;
+  top: 32px;
+  width: 3px;
+  height: calc(100% - 32px);
+  background-color: #ddd;
+}
+
+.status-step.completed .step-connector {
+  background-color: #0077cc;
+}
+
+@media screen and (max-width: 480px) {
+  .check-status-container {
+    padding: 1rem;
+  }
+  input[type="text"], button {
+    font-size: 1rem;
+  }
+  .step-label {
+    font-size: 1rem;
+  }
+  .step-date {
+    font-size: 0.8rem;
+  }
+}

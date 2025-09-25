@@ -1,0 +1,39 @@
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111827;
+}
+.otp-box {
+  background: #1F2937;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #374151;
+  text-align: center;
+  color: #F9FAFB;
+}
+.otp-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.otp-subtitle {
+  color: #9CA3AF;
+  margin-bottom: 2rem;
+}
+.otp-input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.otp-input {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  background: #374151;
+  border: 1px solid #4B5563;
+  border-radius: 8px;
+  color: #F9FAFB;
+}
